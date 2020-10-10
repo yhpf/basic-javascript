@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Project 4 - Basic Events in JavaScript</title>
+	
+	<link rel="stylesheet" href="css/p4-basic-events.css">
+	<script src="js/p4-basic-events.js"></script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body onload="message('LOAD')" onresize="message('RESIZE')">
+	<p>Hi! This page is not responsive. Sorry!</p>
+
+	<hr>
+
+	<!-- Mouseover, Click and Load -->
+	<h1>Mouseover, Click, Resize and Load event</h1>
+	<p>Reload the page to see an <em>onload</em> event or resize the window to see a <em>resize</em> event.</p>
+
+	<p onclick="message('CLICK')" id="box1">Click here to trigger an <em>onclick</em> event.</p>
+
+	<p onmouseover="message('MouseOver')" id="box2">Hover over her for a <em>mouseover</em> event.</p>
+
+	<p id="explain">Below in the yellow box you can see whats happening when you do stuff in this section.</p>
+	<div class="container">
+		<p id="output"></p>
+	</div>
+	<hr>
+
+	<!-- Change Style -->
+	<h1>Changing the Style</h1>
+	<p>Using JavaScript to change the style of a HTML element.</p>
+
+	<div class="container">
+		<button type="button" onclick="openMe()" id="openButton">Open</button>
+		<button type="button" onclick="closeMe()" id="closeButton">Close</button>
+	</div>
+
+	<p id="magic">Use buttons above to open and close this section.</p>
+
+	<hr>
+
+	<!-- Show me the Date -->
+	<h1>Show me the Date</h1>
+	<p id="showDate">Press the big ass ugly button below to show date</p>
+
+	<div class="container">
+		<button type="button" onclick="displayDate()" id="dateButton">Display Date</button>
+	</div>
+
+	<hr>
+
+	<!-- Modify DOM -->
+	<h1>Modify the DOM</h1>
+	<p> What does the animal say?</p>
+
+	<div class="container">
+	<button onclick="document.getElementById('smurf').innerHTML = 'MEOW';" id="cat">Cat</button>
+	<button onclick="document.getElementById('smurf').innerHTML = 'WOFF';" id="dog">Dog</button>
+	</div>
+
+	<div class="container">
+		<p id="smurf" class="dom-example">animal sound</p>
+	</div>
+
+	<hr>
+
+	<p> Thank you for participating in my little JavaScript Event lab!</p>
+
+</body>
+
+</html>
